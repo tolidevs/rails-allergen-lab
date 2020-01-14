@@ -1,0 +1,21 @@
+<h1>Add a recipe to the database</h1>
+
+<%= form_for @recipe do |f| %>
+    <%= f.label :select_user %><br>
+    <%= f.collection_select :user_id, User.all, :id, :name %><br>
+
+
+    
+    <%= f.label :title %><br>
+    <%= f.text_field :title %><br>
+    <%= f.label :instructions %><br>
+    <%= f.text_area :instructions %><br>
+
+    <%= f.label :add_ingredients %><br>
+    <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %><br>
+
+
+
+    <%= f.submit %>
+
+<% end %>

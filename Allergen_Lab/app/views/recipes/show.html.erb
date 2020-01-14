@@ -1,0 +1,8 @@
+<h1><%= @recipe.title %></h1>
+<br>
+<h2>Ingredients needed:</h2>
+<% @recipe.ingredients.each do |i| %>
+    <p><%= i.name %>
+
+<% end %>
+
